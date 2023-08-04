@@ -87,6 +87,7 @@ a {
   color: #000000;
   text-decoration: none;
 }
+
 section.general-section {
   background: url(images/header-img-01.png) no-repeat;
   width: 1600px;
@@ -106,19 +107,27 @@ section.general-section h1 {
   height: 120px;
   padding-top: 80px;
 }
+.request-a-service-btn {
+  cursor: pointer;
+  outline: none;
+}
+.request-a-service-btn:focus,
+.request-a-service-btn:hover {
+  background-color: var(--second-color);
+  color: var(--main-color);
+}
 section.general-section button {
   font-size: 16px;
   font-family: var(--heading-font-family);
   font-weight: 700;
   letter-spacing: normal;
-  width: 161px;
-  height: 30px;
-  color: var(--main-color);
-  background-color: var(--second-color);
+  width: 200px;
+  height: 50px;
+  color: #000;
+  background-color: var(--main-color);
   border-radius: 4px;
-  box-shadow: #00000026;
-  box-sizing: border-box;
-  margin-top: 60px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  margin-top: 76px;
 }
 
 .skills-section ul {
@@ -322,4 +331,48 @@ a {
   letter-spacing: 0.42px;
   text-transform: uppercase;
   text-align: center;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 250ms ease;
+}
+.modal-content {
+  padding: 16px;
+  background: var(--main-color);
+  margin: 0 auto;
+  width: 528px;
+  height: 581px;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  position: relative;
+}
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: 250ms ease;
+}
+.close-btn {
+  background-color: var(--main-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #000;
+  font-size: 18px;
 }
