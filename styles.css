@@ -159,13 +159,6 @@ section.general-section h1 {
 .request-a-service-btn {
   cursor: pointer;
   outline: none;
-}
-.request-a-service-btn:focus,
-.request-a-service-btn:hover {
-  background-color: var(--second-color);
-  color: var(--main-color);
-}
-section.general-section button {
   font-size: 16px;
   font-family: var(--heading-font-family);
   font-weight: 700;
@@ -177,6 +170,12 @@ section.general-section button {
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   margin-top: 76px;
+}
+.request-a-service-btn:focus,
+.request-a-service-btn:hover {
+  background-color: var(--second-color);
+  color: var(--main-color);
+  transition: background-color var(--transition);
 }
 
 .skills-section ul {
@@ -231,6 +230,29 @@ section.general-section button {
   margin-bottom: 94px;
   width: 370px;
   height: 294px;
+}
+.picture-element {
+  position: relative;
+}
+.overlay-text {
+  background: rgba(47, 48, 58, 0.8);
+  position: absolute;
+  bottom: 0;
+  width: 370px;
+  height: 70px;
+  flex-shrink: 0;
+  color: #fff;
+  font-family: var(--text-font-family);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.42px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.picture-element .overlay-text:hover {
+  opacity: 0;
 }
 
 .team-list,
