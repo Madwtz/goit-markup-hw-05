@@ -33,6 +33,55 @@ a {
   transition: color var(--transition);
 }
 
+.main-navigation {
+  position: relative;
+}
+.main-navigation .studio-page:hover::after {
+  content: "";
+  position: absolute;
+  width: 42px;
+  height: 4px;
+  flex-shrink: 0;
+  border-radius: 2px;
+  background: var(--second-color);
+  bottom: 0;
+  display: flex;
+}
+.main-navigation .portofolio-page:hover::after {
+  content: "";
+  position: absolute;
+  width: 58px;
+  height: 4px;
+  flex-shrink: 0;
+  border-radius: 2px;
+  background: var(--second-color);
+  bottom: 0;
+  display: flex;
+}
+.main-navigation .contacts-page:hover::after {
+  content: "";
+  position: absolute;
+  width: 59px;
+  height: 4px;
+  flex-shrink: 0;
+  border-radius: 2px;
+  background: var(--second-color);
+  bottom: 0;
+  display: flex;
+}
+.contact-section ul a:hover,
+.contact-section ul a:focus {
+  color: var(--second-color);
+  transition: var(--transition);
+}
+
+.icons-list a:hover,
+.icons-list a:focus {
+  background: var(--second-color);
+  stroke: var(--main-color);
+  transition: var(--transition);
+}
+
 .container-header {
   background-color: var(--main-color);
   padding-right: 225px;
@@ -246,38 +295,7 @@ section.general-section button {
   line-height: normal;
   letter-spacing: 1.08px;
 }
-.icons-list {
-  display: flex;
-  margin-top: 30px;
-  gap: 10px;
-  justify-content: center;
-}
 
-.icons-list .icon {
-  width: 44px;
-  height: 44px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 22px;
-  color: var(--social-icon-color);
-}
-
-.icons-list .icon:hover,
-.icons-list .icon:focus {
-  color: var(--main-color);
-  fill: var(--second-color);
-}
-.icons-list .icon svg {
-  width: 20px;
-  height: 20px;
-}
-
-.icons svg {
-  width: 170px;
-  height: 92px;
-  border-radius: 4px;
-  border: 1px solid #afb1b8;
-}
 .logo-list {
   width: 170px;
   height: 92px;
@@ -332,6 +350,43 @@ a {
   text-transform: uppercase;
   text-align: center;
 }
+.icons-list {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  gap: 10px;
+  justify-content: center;
+}
+
+.icons-list .icon {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 22px;
+  color: var(--social-icon-color);
+}
+
+.icons-list .icon:hover,
+.icons-list .icon:focus {
+  color: var(--main-color);
+  fill: var(--second-color);
+}
+.icons-list .icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.icons svg {
+  width: 170px;
+  height: 92px;
+  border-radius: 4px;
+  border: 1px solid #afb1b8;
+}
+
+/*Modal */
 
 .modal {
   position: fixed;
