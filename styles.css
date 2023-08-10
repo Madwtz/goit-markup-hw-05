@@ -35,32 +35,9 @@ a {
 
 .link {
   position: relative;
+  transition: color var(--transition);
 }
-.link:active::after {
-  content: "";
-  position: absolute;
-  width: 42px;
-  height: 4px;
-  flex-shrink: 0;
-  border-radius: 2px;
-  background: var(--second-color);
-  bottom: -42px;
-  display: flex;
-}
-/*
-.main-navigation .studio-page:hover::after,
-.main-navigation .studio-page:active {
-  content: "";
-  position: absolute;
-  width: 42px;
-  height: 4px;
-  flex-shrink: 0;
-  border-radius: 2px;
-  background: var(--second-color);
-  bottom: 0;
-  display: flex;
-}
-.main-navigation .portofolio-page:hover::after {
+.link:hover::after {
   content: "";
   position: absolute;
   width: 58px;
@@ -68,24 +45,38 @@ a {
   flex-shrink: 0;
   border-radius: 2px;
   background: var(--second-color);
-  bottom: 0;
+  bottom: -47px;
   display: flex;
 }
-.main-navigation .contacts-page:hover::after {
+
+.link:hover,
+.link:focus,
+.link .studio-page::after {
+  color: var(--second-color);
+}
+.studio-page:hover::after {
   content: "";
   position: absolute;
-  width: 59px;
+  width: 42px;
   height: 4px;
   flex-shrink: 0;
   border-radius: 2px;
   background: var(--second-color);
-  bottom: 0;
+  bottom: -47px;
   display: flex;
 }
-.main-navigation a:hover,
-.link:hover {
+.studio-page::after {
   color: var(--second-color);
-}*/
+  content: "";
+  position: absolute;
+  width: 42px;
+  height: 4px;
+  flex-shrink: 0;
+  border-radius: 2px;
+  background: var(--second-color);
+  bottom: -47px;
+  display: flex;
+}
 .contact-section ul a:hover,
 .contact-section ul a:focus {
   color: var(--second-color);
@@ -109,7 +100,6 @@ a {
 .main-navigation a,
 .container-header .main-navigation a:visited,
 .contact-section {
-  color: var(--link-color);
   font-size: 0.875em;
   font-family: var(--heading-font-family);
   font-style: normal;
@@ -345,6 +335,11 @@ section.general-section h1 {
   display: flex;
   justify-content: center;
   gap: 30px;
+}
+
+.logo-list .icons:hover,
+.logo-list .icons:focus {
+  stroke: var(--second-color);
 }
 
 .footer-section {
