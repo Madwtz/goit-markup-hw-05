@@ -33,10 +33,23 @@ a {
   transition: color var(--transition);
 }
 
-.main-navigation {
+.link {
   position: relative;
 }
-.main-navigation .studio-page:hover::after {
+.link:active::after {
+  content: "";
+  position: absolute;
+  width: 42px;
+  height: 4px;
+  flex-shrink: 0;
+  border-radius: 2px;
+  background: var(--second-color);
+  bottom: -42px;
+  display: flex;
+}
+/*
+.main-navigation .studio-page:hover::after,
+.main-navigation .studio-page:active {
   content: "";
   position: absolute;
   width: 42px;
@@ -69,6 +82,10 @@ a {
   bottom: 0;
   display: flex;
 }
+.main-navigation a:hover,
+.link:hover {
+  color: var(--second-color);
+}*/
 .contact-section ul a:hover,
 .contact-section ul a:focus {
   color: var(--second-color);
